@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consolidation Date Checker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>APN Effective Date Checker</h1>
+  <p>**For AWS onboardings only**</p> 
+  <form id="consolidationForm">
+    <label for="consolidationDate">What is the scheduled date to onboard the customer?</label>
+    <input type="date" id="consolidationDate" name="consolidationDate" required min="2024-01-01" max="2024-12-31">
+    <button type="submit">Check Effective Date</button>
+  </form>
+  <div id="result"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
