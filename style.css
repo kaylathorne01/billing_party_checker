@@ -37,6 +37,7 @@ body {
 
   /* Styles for the input field */
   input[type="date"] {
+    -webkit-appearance: none;
     padding: 10px;  /* Add some padding */
     font-size: 15px; /* Increase font size */
     width: 130px;   /* Set a fixed width */
