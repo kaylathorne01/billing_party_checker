@@ -41,6 +41,7 @@ body {
     font-size: 15px; /* Increase font size */
     width: 130px;   /* Set a fixed width */
     border-radius: 10px;
+    color: black;
   }
   
   /* Styles for the button */
@@ -51,6 +52,7 @@ body {
     cursor: pointer;     /* Change cursor to pointer on hover */
     border-radius: 10px;
     background-color: white;
+    color: black;
   }
 
   button:hover {
