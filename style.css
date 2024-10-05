@@ -45,7 +45,7 @@ body {
   
   /* Styles for the button */
   button {
-    font-family: sans-serif;
+    font-family: sans-serif;  
     padding: 10px 20px; /* Add padding */
     font-size: 15px;   /* Increase font size */
     cursor: pointer;     /* Change cursor to pointer on hover */
@@ -63,4 +63,22 @@ body {
     font-weight: bold; 
     font-size: 24px; /* Increase result font */
     color: white;
+  }
+
+  /* Media query for mobile optimization */
+  @media (max-width: 768px) { 
+    h1 { font-size: 200px; } /* 3x larger h1 */
+    p { font-size: 80px; }   /* 3x larger p */
+    body { font-size: 80px; } /* 3x larger body font */
+    input[type="date"] { 
+      font-size: 45px; /* 3x larger input font */
+      width: 390px;   /* 3x larger input width */
+      color: black;
+    }
+    button { 
+      font-size: 50px; /* 3x larger button font */
+      padding: 30px 60px; /* 3x larger button padding */
+      color: black;
+    }
+    #result { font-size: 72px; } /* 3x larger result font */
   }
