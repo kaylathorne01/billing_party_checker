@@ -47,6 +47,7 @@ body {
   
   /* Styles for the button */
   button {
+    -webkit-appearance: none;
     font-family: sans-serif;  
     padding: 10px 20px; /* Add padding */
     font-size: 15px;   /* Increase font size */
