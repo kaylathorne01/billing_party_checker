@@ -72,20 +72,35 @@ body {
   }
   
 
-  /* Media query for mobile optimization */
-  @media (max-width: 768px) { 
-    h1 { font-size: 200px; } /* 3x larger h1 */
-    p { font-size: 80px; }   /* 3x larger p */
-    body { font-size: 80px; } /* 3x larger body font */
-    input[type="date"] { 
-      font-size: 45px; /* 3x larger input font */
-      width: 390px;   /* 3x larger input width */
-      color: black;
-    }
-    button { 
-      font-size: 50px; /* 3x larger button font */
-      padding: 30px 60px; /* 3x larger button padding */
-      color: black;
-    }
-    #result { font-size: 72px; } /* 3x larger result font */
+/* Media query for mobile optimization */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem; /* Adjust heading size for mobile */
   }
+  p {
+    font-size: 1.25rem; /* Adjust paragraph size for mobile */
+  }
+  body {
+    font-size: 1rem; /* Adjust overall font size for mobile */
+  }
+  form {
+    gap: 1rem; /* Adjust spacing between form elements */
+    padding: 1.5rem; /* Adjust padding inside the form */
+  }
+  input[type="date"] {
+    font-size: 1.2rem; /* Adjust input font size */
+    padding: 0.75rem; /* Adjust input padding */
+    width: 100%; /* Full width on smaller screens */
+    max-width: 300px; /* Limit max width for better layout */
+  }
+  button {
+    font-size: 1.2rem; /* Adjust button font size */
+    padding: 0.75rem 1.5rem; /* Adjust button padding */
+  }
+  #result {
+    font-size: 1.2rem; /* Adjust result font size */
+    padding: 1rem; /* Add padding for better spacing */
+    margin: 1.5rem auto; /* Add margin for separation */
+    max-width: 90%; /* Limit result box width to fit mobile */
+  }
+}
