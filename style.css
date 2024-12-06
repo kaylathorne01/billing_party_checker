@@ -63,11 +63,14 @@ body {
   }
   
   #result {
-    margin-top: 50px;
-    font-weight: bold; 
-    font-size: 24px; /* Increase result font */
+    margin: 50px auto; /* Add space around the result */
+    padding: 15px; /* Add padding inside the container */
+    max-width: 600px; /* Limit the width of the result container */
+    text-align: center; /* Center-align the text */
+    font-size: 24px; /* Optional: Adjust font size for better readability */
     color: white;
   }
+  
 
   /* Media query for mobile optimization */
   @media (max-width: 768px) { 

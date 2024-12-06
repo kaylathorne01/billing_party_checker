@@ -6,22 +6,22 @@ form.addEventListener('submit', function(event) {
 
   const consolidationDate = new Date(document.getElementById('consolidationDate').value);
   const currentMonth = consolidationDate.getMonth() + 1; // JavaScript months are 0-indexed
+  const day = consolidationDate.getDate(); // Get the day of the month
 
   // **IMPORTANT:** Cutoff date entered needs to be one day before actual cutoff to populate correct effective date!!
   const cutoffDates = {
-    1: 23, // January cutoff is the 24th
-    2: 21, // February cutoff is the 22nd
-    3: 23, // March cutoff is the 24th
-    4: 22, // April cutoff is the 23rd
-    5: 23,  // May cutoff is the 24th
-    6: 22,  // June cutoff is the 23rd
-    7: 23, // July cutoff is the 24th
-    8: 23, // August cutoff is the 24th
-    9: 22, // September cutoff is the 23rd
-    10: 23, // October cutoff is the 24th
-    11: 22,  // November cutoff is the 23rd
-    12: 23  // December cutoff is the 24th
-    // Add more months and cutoff dates as needed
+    1: 19, 
+    2: 19, 
+    3: 19, 
+    4: 19, 
+    5: 19,  
+    6: 19,  
+    7: 19, 
+    8: 19, 
+    9: 19, 
+    10: 19, 
+    11: 19,  
+    12: 19 
   };
 
   let effectiveDate;
@@ -31,8 +31,14 @@ form.addEventListener('submit', function(event) {
     effectiveDate = new Date(consolidationDate.getFullYear(), currentMonth, 1); // 1st of next month
   }
 
-  // Format the effective date (e.g., "10/1/24")
-  const formattedEffectiveDate = `${effectiveDate.getMonth() + 1}/${effectiveDate.getDate()}/${effectiveDate.getFullYear().toString().slice(-2)}`;
+  // Add the new logic for 1st-20th vs 21st-last day of the month
+  let message;
+  if (day >= 1 && day <= 20) {
+    message = `DoiT will invoice the customer for this month, and the customer does not need to pay AWS directly for any invoices issued after this date while onboarded with DoiT.`;
+  } else {
+    message = `AWS will invoice the customer for this month, and DoiT will take over the customer's AWS billing beginning with next month's billing period.`;
+  }
 
-  resultDiv.textContent = `The APN effective date will be ${formattedEffectiveDate}`;
+  // Display the result
+  resultDiv.textContent = message;
 });
