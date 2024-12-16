@@ -10,7 +10,7 @@ form.addEventListener('submit', function(event) {
 
   // **IMPORTANT:** Cutoff date entered needs to be one day before actual cutoff to populate correct effective date!!
   const cutoffDates = {
-    1: 18, 
+    1: 19, 
     2: 19, 
     3: 19, 
     4: 19, 
