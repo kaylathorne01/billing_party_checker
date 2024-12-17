@@ -16,8 +16,10 @@ body {
   justify-content: center; /* Center vertically */
   font-size: 20px;  /* Increase font */
   font-weight: bold;
+  height: 100vh; /* Force body height to fill the viewport */
   border: 5px solid #000433;
   background-color: #000433; /* Page background color */
+  overflow-y: auto; /* Allow scrolling if content grows */
 }
 
 h1 {
@@ -33,6 +35,7 @@ p {
   
 form {
   margin-top: 20px;
+  margin-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,15 +74,32 @@ form {
     color: white;
   }
   
-  #result {
-    margin: 50px auto; /* Add space around the result */
-    padding: 15px; /* Add padding inside the container */
-    max-width: 600px; /* Limit the width of the result container */
-    text-align: center; /* Center-align the text */
-    font-size: 24px; /* Optional: Adjust font size for better readability */
-    color: white;
-  }
-  
+  /* Reset default margins */
+form, #result, #nonOrgResult {
+  margin: 0; /* Remove all default margins */
+}
+
+/* Org results spacing */
+#result {
+  margin-top: 20px; /* Add spacing below the form for Org results */
+  padding: 15px; /* Maintain consistent padding */
+  max-width: 600px; /* Limit width for Org results */
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}
+
+/* Non-Org results spacing */
+#nonOrgResult {
+  margin-top: 5px; /* Minimal spacing below the form for Non-Org results */
+  padding: 15px; /* Maintain consistent padding */
+  max-width: 830px; /* Wider width for Non-Org results */
+  text-align: left;
+  font-size: 20px;
+  color: white;
+  line-height: 1.4; /* Improve text readability */
+}
+
 
 /* Media query for mobile optimization */
 @media (max-width: 768px) {
